@@ -1,4 +1,5 @@
-include ../../make.inc
+TOPDIR=../..
+include $(TOPDIR)/make.inc
 
 ########################################################################
 #  This is the makefile for the eigenvalue test program from LAPACK.
@@ -165,12 +166,12 @@ clean:
 	rm -f *.o
 
 schkee.o: schkee.c
-	$(CC) $(DRVCFLAGS) -I../../INCLUDE -c $< -o $@
+	$(CC) $(DRVCFLAGS) -c $< -o $@
 dchkee.o: dchkee.c
-	$(CC) $(DRVCFLAGS) -I../../INCLUDE -c $< -o $@
+	$(CC) $(DRVCFLAGS) -c $< -o $@
 cchkee.o: cchkee.c
-	$(CC) $(DRVCFLAGS) -I../../INCLUDE -c $< -o $@
+	$(CC) $(DRVCFLAGS) -c $< -o $@
 zchkee.o: zchkee.c
-	$(CC) $(DRVCFLAGS) -I../../INCLUDE -c $< -o $@
+	$(CC) $(DRVCFLAGS) -c $< -o $@
 
-.c.o : ; $(CC) $(CFLAGS) -I../../INCLUDE -c $<
+.c.o : ; $(CC) $(CFLAGS) -c $<

@@ -1,4 +1,5 @@
-include ../../make.inc
+TOPDIR=../..
+include $(TOPDIR)/make.inc
 
 #######################################################################
 #  This makefile creates the test programs for the linear equation
@@ -301,13 +302,13 @@ clean:
 	rm -f *.o
 
 schkaa.o: schkaa.c
-	$(CC) $(DRVCFLAGS) -I../../INCLUDE -c $< -o $@
+	$(CC) $(DRVCFLAGS) -c $< -o $@
 dchkaa.o: dchkaa.c
-	$(CC) $(DRVCFLAGS) -I../../INCLUDE -c $< -o $@
+	$(CC) $(DRVCFLAGS) -c $< -o $@
 cchkaa.o: cchkaa.c
-	$(CC) $(DRVCFLAGS) -I../../INCLUDE -c $< -o $@
+	$(CC) $(DRVCFLAGS) -c $< -o $@
 zchkaa.o: zchkaa.c
-	$(CC) $(DRVCFLAGS) -I../../INCLUDE -c $< -o $@
+	$(CC) $(DRVCFLAGS) -c $< -o $@
  
 .c.o: 
-	$(CC) $(CFLAGS) -I../../INCLUDE -c $<
+	$(CC) $(CFLAGS) -c $<

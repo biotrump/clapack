@@ -1,4 +1,5 @@
-include ../../make.inc
+TOPDIR=../..
+include $(TOPDIR)/make.inc 
  
 #######################################################################
 #  This makefile creates the test programs for the BLAS 2 routines.
@@ -71,4 +72,4 @@ clean:
 	rm -f *.o
  
 .c.o: 
-	$(CC) $(CFLAGS) -I../../INCLUDE -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@

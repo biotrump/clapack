@@ -12,7 +12,6 @@
 
 #include "f2c.h"
 #include "blaswrap.h"
-#include "string.h"
 
 /* Table of constant values */
 
